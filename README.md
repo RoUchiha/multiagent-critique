@@ -1,6 +1,6 @@
 # critiqueloop — Multi-Agent Evaluator-Optimizer Loop
 
-**🔁 [Live demo on Hugging Face Spaces](https://huggingface.co/spaces/rosingh/multiagent-critique)** — enter a task and watch the consensus score climb round over round.
+**🔁 [Live demo on Hugging Face Spaces](https://huggingface.co/spaces/rosingh/ai-ml-portfolio-demos)** — enter a task and watch the consensus score climb round over round.
 
 A generator proposes an answer, **multiple critics review it in parallel against a
 rubric**, an aggregator merges their feedback into a consensus, and the generator
