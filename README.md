@@ -2,6 +2,16 @@
 
 **🔁 [Live demo on Hugging Face Spaces](https://huggingface.co/spaces/rosingh/ai-ml-portfolio-demos)** — enter a task and watch the consensus score climb round over round.
 
+## 🧠 In plain English
+
+**The problem:** an AI's first answer is rarely its best. Asking once and shipping that leaves quality on the table.
+
+**The fix (analogy):** a writer with a panel of editors — one checks facts, one checks clarity, one checks safety. They mark up the draft *in parallel*; the writer revises; repeat until the panel is satisfied.
+
+**How it works:** a **generator** drafts an answer → several **critics** score it at once against a rubric, each listing specific issues → the feedback is merged into one consensus score → if it's below the bar, the generator **revises** using that feedback and the loop repeats (up to a max number of rounds).
+
+**The clever bit:** critics run **concurrently** (three reviews ≈ one review's wait); the consensus uses the *average* score so one harsh critic can't block forever but every critic still counts; and there's an optional **human sign-off** before accepting. Quality measurably improves over a single shot — and the extra token cost is stated honestly.
+
 A generator proposes an answer, **multiple critics review it in parallel against a
 rubric**, an aggregator merges their feedback into a consensus, and the generator
 **revises** — looping until quality passes a bar or `max_rounds` is hit. Output
